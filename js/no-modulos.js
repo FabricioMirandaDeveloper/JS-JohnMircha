@@ -1,0 +1,1 @@
+console.log("Para ecmascript inferior a 5");
