@@ -92,7 +92,37 @@
 
 // 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 
+/* function invertirCadena(cadena) {
+    (!cadena) 
+    ? console.log("Ingresa un texto")
+    : console.log(cadena.split('').reverse().join(''))
+}
+invertirCadena()
+invertirCadena("Hola Mundo")
+invertirCadena("Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde error magnam, facere tempore debitis cupiditate quia perferendis odio laudantium maxime reprehenderit nesciunt vero sapiente dignissimos at totam, autem recusandae?") */
+
+
 // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+
+function contarPalabras(texto, palabra) {
+    // Dividir el texto en palabras usando espacios como delimitadores
+    const palabras = texto.split(' ');
+    console.log(palabras);
+    // Contar las ocurrencias de la palabra específica
+    let contador = 0;
+    for (let i = 0; i < palabras.length; i++) {
+      if (palabras[i] === palabra) {
+        contador++;
+      }
+    }
+    
+    return contador;
+  }
+  
+  // Ejemplo de uso
+  const resultado = contarPalabras("hola mundo adios mundo", "mundo");
+  console.log(resultado); // 2
+  
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
