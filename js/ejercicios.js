@@ -134,8 +134,51 @@ palindromo("salas") */
 
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
-const eliminarPatron = (texto, patron) => {
+/* const eliminarPatron = (texto, patron) => {
   console.log(texto.replace(new RegExp(patron, 'ig'), ''))
 }
-eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); */
 
+// 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+/* 
+const aleatorio = () => {
+  let num = Math.floor(Math.random() * (600 - 501 + 1) + 501)
+  console.log(num);
+  return num;
+}
+aleatorio() */
+// 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+
+/* const esCapicua = numero => {
+  if(typeof numero != "number") return "Ingresa un número"
+  let numeroACadena = numero.toString();
+  let cadenaInvertidad = numeroACadena.split('').reverse().join('');
+  return numeroACadena === cadenaInvertidad;
+}
+console.log(esCapicua(2002)); 
+console.log(esCapicua(1234)); 
+console.log(esCapicua(12321));
+console.log(esCapicua("12"))  */
+// 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+/* const factorial = (num = undefined) => {
+  if(num === undefined) return console.log("Ingresa un numero")
+  if(typeof num != "number") return console.log("No ingresaste un numero");
+  if(num === 0) return console.log("El numero no puede ser 0");
+  if(Math.sign(num) === -1) return console.log("El numero no puede ser negativo");
+  let result = 1
+  for (let i = 1; i <= num; i++) {
+    result = result * i
+  }
+  console.log(`El factorial de ${num} es: ${result}`);
+}
+factorial()
+factorial("5")
+factorial(0)
+factorial(-5)
+factorial(5) */
+
+// 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+
+// 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+// 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.

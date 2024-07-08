@@ -61,11 +61,11 @@
     $fragment = document.createDocumentFragment();
     async function getData() {
         try {
-            let res = await fetch("https://jsonplaceholder.typicode.com/users"),
-            json = await res.json()
+            let res = await fetch("https://jsonplaceholder.typicode.com/user"),
+            json = await (res.ok ? res.json() : Promise.reject(res))
             /* console.log(res);
             console.log(json); */
-            if(!res.ok) throw {status: res.status, statusText: res.statusText}
+            /* if(!res.ok) throw {status: res.status, statusText: res.statusText} */
             json.forEach(e => {
                 let $li = document.createElement("li")
                 $li.innerHTML = `${e.name} -- ${e.phone} -- ${e.email}`
