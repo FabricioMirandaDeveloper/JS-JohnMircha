@@ -11,10 +11,6 @@
 // console.log(countText(3));
 // console.log(countText({}));
 
-
-
-
-
 // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 
 // function croppedText(text, cropped) {
@@ -30,10 +26,6 @@
 // console.log(croppedText({},2));
 // console.log(croppedText(10));
 
-
-
-
-
 // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 
 // function ArrayText(text, separator) {
@@ -47,10 +39,6 @@
 // console.log(ArrayText("hola que tal", " "));
 // console.log(ArrayText({}, " "));
 // console.log(ArrayText(10, ""));
-
-
-
-
 
 // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
 
@@ -72,7 +60,6 @@
 // console.log(repeatText({},3));
 // console.log(repeatText(10, ""));
 
-
 // Otra manera
 // const repetirTexto = (texto = "", repeticiones = undefined) => {
 //     if(!texto) return console.warn("No ingresasate un texto")
@@ -88,8 +75,6 @@
 // repetirTexto("",2)
 // repetirTexto("Ho")
 
-
-
 // 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 
 /* function invertirCadena(cadena) {
@@ -100,7 +85,6 @@
 invertirCadena()
 invertirCadena("Hola Mundo")
 invertirCadena("Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde error magnam, facere tempore debitis cupiditate quia perferendis odio laudantium maxime reprehenderit nesciunt vero sapiente dignissimos at totam, autem recusandae?") */
-
 
 // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 
@@ -119,7 +103,6 @@ invertirCadena("Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedit
   
   const resultado = contarPalabras("hola mundo adios mundo", "mundo");
   console.log(resultado);  */
-  
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
@@ -179,6 +162,77 @@ factorial(5) */
 
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
+// function esPrimo(num = undefined) {
+//   if(num === undefined) {
+//     console.error("Ingresa un numero");
+//     return
+//   }
+//   if(typeof num !== "number") {
+//     console.error("Debes ingresar un numero");
+//     return
+//   }
+//   if(num <= 1) {
+//     return false
+//   }
+//   if(num === 2) {
+//     return true
+//   }
+//   if(num % 2 === 0) {
+//     return false
+//   }
+//   for (let i = 3; i * i <= num; i += 2) {
+//     if(num % i === 0) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+// esPrimo()
+// esPrimo("a")
+// console.log(esPrimo(1));
+// console.log(esPrimo(2));
+// console.log(esPrimo(3));
+// console.log(esPrimo(7));
+
 // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 
+// const parImpar = (num = undefined) => {
+//   if (num === undefined) {
+//     console.error("Ingresa un numero");
+//     return;
+//   }
+//   if (typeof num !== "number") {
+//     console.error("Debes ingresar un numero");
+//     return;
+//   }
+//   (num % 2 === 0) ? console.log("Es par") : console.log("Es impar");
+
+// };
+
+// parImpar()
+// parImpar("4")
+// parImpar(4)
+// parImpar(-1)
+
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+/* const grados = () => {
+  let num = parseFloat(prompt("Ingresa un numero"));
+  let option = prompt(`Elije el tipo de Grado
+    1) Celsius
+    2) Fahrenheit
+    `);
+  if (option === "1") {
+    let fahrenheit = (num * 9) / 5 + 32;
+    return console.log(
+      `${num} Grados Celcius equivalen a ${fahrenheit} Grados Fahrenheit `
+    );
+  } else {
+    let centigrados = ((num - 32) * 5) / 9;
+    return console.log(
+      `${num} Grados Fahrenheit equivalen a ${centigrados} Grados Celcius`
+    );
+  }
+};
+grados(); */
