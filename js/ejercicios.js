@@ -78,7 +78,7 @@
 // 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 
 /* function invertirCadena(cadena) {
-    (!cadena) 
+    (!cadena)
     ? console.log("Ingresa un texto")
     : console.log(cadena.split('').reverse().join(''))
 }
@@ -97,10 +97,10 @@ invertirCadena("Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedit
         contador++;
       }
     }
-    
+
     return contador;
   }
-  
+
   const resultado = contarPalabras("hola mundo adios mundo", "mundo");
   console.log(resultado);  */
 
@@ -123,7 +123,7 @@ palindromo("salas") */
 eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); */
 
 // 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
-/* 
+/*
 const aleatorio = () => {
   let num = Math.floor(Math.random() * (600 - 501 + 1) + 501)
   console.log(num);
@@ -138,8 +138,8 @@ aleatorio() */
   let cadenaInvertidad = numeroACadena.split('').reverse().join('');
   return numeroACadena === cadenaInvertidad;
 }
-console.log(esCapicua(2002)); 
-console.log(esCapicua(1234)); 
+console.log(esCapicua(2002));
+console.log(esCapicua(1234));
 console.log(esCapicua(12321));
 console.log(esCapicua("12"))  */
 // 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
@@ -236,3 +236,71 @@ factorial(5) */
   }
 };
 grados(); */
+
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+
+/* const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
+  if(numero === undefined) return console.warn("No ingresaste el numero a convertir");
+
+  if(typeof numero != "number") return console.error(`El valor ${numero} ingresado, NO es un numero`);
+
+  if(base === undefined) return console.warn("No ingresaste la base a convertir");
+
+  if(typeof base != "number") return console.error(`El valor ${base} ingresado, NO es un numero`);
+
+  if(base === 2) {
+    return console.info(`${numero} base ${base} = ${parseInt(numero, base)} base 10`)
+  }else if(base === 10) {
+    return console.info(`${numero} base ${base} = ${numero.toString(2)} base 2`)
+  }else {
+    return console.error("El tipo de base a convertir NO es valido");
+  }
+}   */
+
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+
+/* const descuento = (number = undefined, discound = undefined) => {
+  if(number === undefined) return console.warn("No ingresaste el monto");
+
+  if(typeof number != "number") return console.error(`El valor ${number} ingresado, NO es un numero`);
+
+  if(discound === undefined) return console.warn("No ingresaste el descuento a aplicar");
+
+  if(typeof discound != "number") return console.error(`El valor ${discound} ingresado, NO es un numero`);
+
+  const newPrice = number - ((number * discound)/ 100)
+  return console.log(`${number} soles con el descuento del ${discound}% es ${newPrice} soles`);
+}
+
+descuento()
+descuento("1000")
+descuento(1000)
+descuento(1000, "20")
+descuento(1000, 20)
+*/
+// 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+// const calcularAnios = (fecha = undefined) => {
+//   if(fecha === undefined) return console.warn("No ingresaste la fecha")
+//   if(!(fecha instanceof Date)) return console.error("El valor que ingresaste no es una fecha valida");
+
+//   let hoyMenosFecha = new Date().getTime() - fecha.getTime(),
+//   aniosEnMs = 1000 * 60 *60 * 24 * 365,
+//   aniosHumanos = Math.floor(hoyMenosFecha / aniosEnMs)
+
+//   return (Math.sign(aniosHumanos) === -1)
+//   ? console.info(`Faltan ${Math.abs(aniosHumanos)} años para el ${fecha.getFullYear()}`)
+//   : (Math.sign(aniosEnMs) === 1)
+//     ? console.info(`Han pasado ${aniosHumanos} años desde ${fecha.getFullYear()}`)
+//     : console.info(`Estamos en el año actual ${fecha.getFullYear()}`)
+// }
+// calcularAnios()
+// calcularAnios("")
+// calcularAnios(false)
+// calcularAnios(new Date())
+// calcularAnios(new Date(2001,3,4))
+// calcularAnios(new Date(2100,3,4))
+
+// 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+// 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+// 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
