@@ -302,5 +302,62 @@ descuento(1000, 20)
 // calcularAnios(new Date(2100,3,4))
 
 // 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+
+/* const contarVocalesYConsonantes = (texto = "") => {
+  if(!texto) return "No ingresaste una cadena de texto"
+  const vocales = 'aeiouáéíóúüAEIOUÁÉÍÓÚÜ'
+  let numVocales = 0
+  let numConsonantes = 0
+  for (const char of texto) {
+    if(char.match(/[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]/)) {
+      if(vocales.includes(char)) {
+        numVocales++
+      }else {
+        numConsonantes++
+      }
+    }
+  }
+  return `Vocales: ${numVocales}, Consonantes: ${numConsonantes}`;
+}
+console.log(contarVocalesYConsonantes());
+console.log(contarVocalesYConsonantes("fabricio")); */
+
 // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+/* const esNombreValido = (nombre = "") => {
+  if (!nombre) return "No ingresaste un nombre"
+  if (typeof nombre !== "string") return console.error(`El valor ${nombre} ingresado, NO es una cadena de texto`);
+  const regexNombre = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/;
+  return regexNombre.test(nombre)
+  ? "Es un nombre valido"
+  : "No es un nombre valido"
+}
+
+console.log(esNombreValido()); 
+console.log(esNombreValido(4));
+console.log(esNombreValido("Fabricio Miranda"));
+console.log(esNombreValido("Fabricio123")); 
+console.log(esNombreValido("123")); 
+console.log(esNombreValido("Fabricio Miranda!")) */
+
 // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+/* const esEmailValido = (email = "") => {
+  if (!email) return "No ingresaste un email";
+  if (typeof email !== "string") return `El valor ${email} ingresado, NO es una cadena de texto`;
+
+  const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regexEmail.test(email)
+    ? "Es un email válido"
+    : "No es un email válido";
+}
+
+console.log(esEmailValido())
+console.log(esEmailValido(123))
+console.log(esEmailValido("jonmircha@gmail.com"))
+console.log(esEmailValido("jonmircha@gmail")) 
+console.log(esEmailValido("jonmircha@gmail."))
+console.log(esEmailValido("jonmircha@.com"))
+console.log(esEmailValido("jonmircha@gmail.c"))
+console.log(esEmailValido("jonmircha@gmail.comm"))
+ */
